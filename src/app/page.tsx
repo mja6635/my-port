@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AboutMe from "../components/about-me";
+import Proj from "../components/proj";
 
 export default function Home() {
   return (
@@ -47,41 +48,8 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">Hi, I'm Matt Atanasoff</h1>
       </section>
 
-
       <AboutMe/>
-
-
-      {/* Projects Section */}
-      <section className="py-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center">Projects</h2>
-        <div className="overflow-x-auto">
-          <div className="flex space-x-6 px-4">
-            {/* Project Card */}
-            <a
-              href="https://github.com/mja6635/calculator"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="min-w-[280px] max-w-sm bg-white dark:bg-zinc-800 rounded-xl shadow-md overflow-hidden hover:ring-2 hover:ring-zinc-400 dark:hover:ring-zinc-600 transition"
-            >
-              <Image
-                src="/calculator-proj.png"
-                alt="Calculator Project"
-                width={300}
-                height={200}
-                className="object-cover w-full h-40"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-bold">Calculator</h3>
-                <p className="text-sm text-foreground/70 mt-2">
-                  Created fully functioning calculator
-                </p>
-              </div>
-            </a>
-
-            {/* Duplicate more cards here */}
-          </div>
-        </div>
-      </section>
+      <Proj />
     </main>
   );
 }
